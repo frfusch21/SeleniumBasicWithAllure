@@ -24,8 +24,6 @@ public class BaseTest {
 //        driver.set(new ChromeDriver(options));
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
-        // Add any FirefoxOptions you need
-        // For example, to run in headless mode: options.addArguments("--headless");
 
         driver.set(new FirefoxDriver(options));
         driver.get().manage().window().maximize();

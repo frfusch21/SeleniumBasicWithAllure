@@ -1,6 +1,4 @@
 package Test;
-import io.qameta.allure.Step;
-import io.qameta.allure.Description;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,7 +8,6 @@ import org.testng.annotations.Test;
 
 public class GetProduct extends BaseTest {
     @Test(priority = 1)
-    @Description("Test Description: Product Price Check.")
     public void getPrice() {
         WebElement phonesLink = driver.get().findElement(By.xpath("//a[.='Phones']"));
         phonesLink.click();
@@ -25,7 +22,6 @@ public class GetProduct extends BaseTest {
     }
 
     @Test(priority = 2)
-    @Description("Test Description: Sign Up functionality check.")
     public void testSignUp() {
         driver.get().findElement(By.xpath("//a[.='Sign up']")).click();
         explicitWait.get().until(ExpectedConditions.visibilityOfElementLocated(By.id("signInModal")));
